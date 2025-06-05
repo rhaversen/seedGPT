@@ -1,4 +1,4 @@
-import { WorkerResponse, DepartmentPrompt, WorkerPrompt, HeadPrompt } from '../../types/department.js'
+import { WorkerResponse, WorkerPrompt, HeadPrompt } from '../../types/department.js'
 
 export abstract class BaseDepartment {
   // Unique identifier for this department

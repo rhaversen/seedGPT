@@ -56,7 +56,7 @@ export class AnthropicBatchClient {
     }
   }
 
-  async awaitBatchCompletion(batchId: string, timeoutMs: number = 1000*60*60*24): Promise<void> {
+  async awaitBatchCompletion(batchId: string, timeoutMs: number = 1000 * 60 * 60 * 24): Promise<void> {
     const startTime = Date.now()
     while (true) {
       const batch = await this.getBatchStatus(batchId)
@@ -66,7 +66,7 @@ export class AnthropicBatchClient {
       if (Date.now() - startTime > timeoutMs) {
         throw new Error(`Batch ${batchId} did not complete within ${timeoutMs}ms. Current status: ${batch.processing_status}`)
       }
-      await new Promise(resolve => setTimeout(resolve, 1000*60*5)) // Check every 5 minutes
+      await new Promise(resolve => setTimeout(resolve, 1000 * 60 * 5)) // Check every 5 minutes
     }
   }
 

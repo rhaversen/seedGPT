@@ -1,5 +1,5 @@
 import { BaseDepartment } from '../base/baseDepartment.js'
-import { WorkerResponse, DepartmentPrompt, WorkerPrompt, HeadPrompt } from '../../types/department.js'
+import { WorkerResponse, WorkerPrompt, HeadPrompt } from '../../types/department.js'
 import { getEligibleTasks, getTask } from '../../scrum.js'
 
 interface WorkerCodeQualityResult {
