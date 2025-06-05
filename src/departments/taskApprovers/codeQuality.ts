@@ -13,6 +13,8 @@ interface WorkerCodeQualityResult {
 }
 
 export class CodeQualityDepartment extends BaseDepartment {
+  id = 'code-quality'
+
   constructor() {
     super('code-quality')
   }
