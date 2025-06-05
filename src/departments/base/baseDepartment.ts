@@ -21,7 +21,7 @@ export abstract class BaseDepartment {
   // Given all worker outputs for this department, reduce them to reports
   abstract getDepartmentHeadBatchPrompts(responses: WorkerResponse[]): Promise<HeadPrompt[]>
 
-  // Utility: get N worker prompts for a single task
+  // Generate worker prompts based on a task and a base prompt template
   protected generateWorkerPrompts(
     task: { id: string; title: string; description: string },
     basePrompt: string,
